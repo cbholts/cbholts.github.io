@@ -1,0 +1,109 @@
+
+    /* Add some style to the page */
+    body {
+      font-family: courier new, sans-serif;
+    }
+    h1 {
+      color: white;
+    }
+    h2 {
+        color:white;
+    }
+    .aboutme {
+      margin: 30px;
+      width: device;
+      background-color:lightblue;
+      height: 400px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: flex;
+      flex-direction: column;  
+      align-items: center;
+      justify-content: center;
+    }
+    .aboutme p{
+        color:white;
+        font-weight: bold;
+    }
+    .project {
+      margin: 0 auto;
+      padding: 20px;
+      max-width: 900px;
+    }
+    .project h3 {
+      margin: 0;
+    }
+    /* Style the header and navigation menu */
+    header {
+      background-color: black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      width: max-content;
+      margin: 0 auto;
+      top:-100%;
+      position: fixed;
+    }
+    header.visible {
+      background-color: rgba(250,250,250,1);
+      position: fixed;
+      transition: all 0.3s ease;
+      margin: 0 auto;
+      top: 0; /* position the header at the top of the viewport */
+      left: 0; /* position the header at the left of the viewport */
+      right: 0; /* position the header at the right of the viewport */
+      width: 100%; /* make the header take up the full width of the viewport */
+      }
+    header.visible h1{
+      color: black;
+      font-size: small;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav {
+      display: flex;
+    }
+    nav.header-visible {
+      display: flex;
+    }
+    nav a {
+      color: black;
+      text-decoration: none;
+      padding: 0 20px;
+      font-size: small;
+    }
+    nav.header-visible a {
+      color: black;
+      text-decoration: none;
+      padding: 0 20px;
+    }
+    nav a:hover {
+      color: navy;
+    }
+    footer {
+      text-align: left;
+      border-top: 1px solid lightgray;
+      background-color: white;
+      max-width: 900px;
+      margin: 0 auto;
+      color: black;
+    }
+
+  .flex-container {
+    display: flex;
+    align-items: center; /* center the items vertically */
+    justify-content: center; /* center the items horizontally */
+    margin: 0 auto;
+    max-width: 700px;
+    }
+
+   .flex-item {
+    width: 50%; /* divide the container in 2 equal columns */
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 700px;
+    }
+
