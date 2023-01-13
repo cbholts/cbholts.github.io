@@ -10,7 +10,7 @@
         color:white;
     }
     .aboutme {
-      margin: 30px;
+      margin: 0;
       width: device;
       background-color:lightblue;
       height: 400px;
@@ -35,7 +35,7 @@
       margin: 0;
     }
     /* Style the header and navigation menu */
-    header {
+    /*header {
       background-color: black;
       display: flex;
       justify-content: space-between;
@@ -44,7 +44,7 @@
       width: max-content;
       margin: 0 auto;
       top:-100%;
-      position: fixed;
+      position: fixed;*/
     }
     header.visible {
       background-color: rgba(250,250,250,1);
@@ -107,3 +107,68 @@
     max-width: 700px;
     }
 
+/*spreadsheet style header*/
+
+header{
+  background-color: #f2f2f2;
+  position: sticky;
+  width:100%-1px;
+  top:0;
+  left:0;
+  z-index: 1;
+  border-left: 1px solid darkgrey;
+  border-top: 1px solid darkgrey;
+  font:arial;
+}
+
+.header-grid-container {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr); /* 3 columns */
+  grid-template-rows: repeat(3, 1fr); /* 4 rows */
+}
+
+.grid-item-col {
+  border-bottom: 0.5px solid darkgrey;
+  border-right:1px solid darkgrey;
+  padding: 0.5px;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  vertical-align: middle;
+  font-size: small;
+}
+
+.grid-item {
+  border-bottom: 1px solid darkgrey;
+  border-right:1px solid darkgrey;
+  background-color: white;
+  padding: 0.5px;
+  font-size: small;
+  display:flex;
+  align-items: center;
+}
+
+.grid-item-link {
+  border-bottom: 0.5px solid darkgrey;
+  border-right:1px solid darkgrey;
+  background-color: white;
+  padding: 0.5px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-size: small;
+}
+
+.grid-item-link:hover {
+  border-bottom: 1px solid blue;
+  border-right:1px solid blue;
+  border-left: 1px solid blue;
+  border-top: 1px solid blue;
+  font-size:small;
+  padding: 0px;
+  text-align: center;
+}
+
+.header-item{
+  background-color: lightgray;
+}
