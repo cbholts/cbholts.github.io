@@ -1,4 +1,4 @@
-let header = document.getElementById("header");
+/*let header = document.getElementById("header");
 const navLinks = document.querySelectorAll('nav a');
 
 window.addEventListener("scroll", function() {
@@ -10,3 +10,4 @@ window.addEventListener("scroll", function() {
     header.classList.remove("visible");
   }
 });
+*/
