@@ -1,7 +1,6 @@
-
-    /* Add some style to the page */
     body {
-      font-family: courier new, sans-serif;
+      font-family: system-ui;
+      background-color: whitesmoke;
     }
     h1 {
       color: white;
@@ -12,7 +11,7 @@
     .aboutme {
       margin: 0;
       width: device;
-      background-color: #02264f;
+      background-color: #000312;
       height: 400px;
       background-size: cover;
       background-repeat: no-repeat;
@@ -44,18 +43,19 @@
       width: max-content;
       margin: 0 auto;
       top:-100%;
-      position: fixed;*/
+      position: fixed;
     }
     header.visible {
       background-color: rgba(250,250,250,1);
       position: fixed;
       transition: all 0.3s ease;
       margin: 0 auto;
-      top: 0; /* position the header at the top of the viewport */
-      left: 0; /* position the header at the left of the viewport */
-      right: 0; /* position the header at the right of the viewport */
-      width: 100%; /* make the header take up the full width of the viewport */
-      }
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      }*/
+
     header.visible h1{
       color: black;
       font-size: small;
@@ -84,7 +84,8 @@
       color: navy;
     }
     footer {
-      text-align: left;
+      padding-top: 500px;
+      text-align: center;
       border-top: 1px solid lightgray;
       background-color: white;
       max-width: 900px;
@@ -92,7 +93,7 @@
       color: black;
     }
 
-  .flex-container {
+  .project-column {
     display: flex;
     align-items: center; /* center the items vertically */
     justify-content: center; /* center the items horizontally */
@@ -100,7 +101,7 @@
     max-width: 700px;
     }
 
-   .flex-item {
+   .project-column-item {
     width: 50%; /* divide the container in 2 equal columns */
     padding: 20px;
     margin: 0 auto;
@@ -115,16 +116,17 @@ header{
   width:100%-1px;
   top:0;
   left:0;
-  z-index: 1;
+  z-index: 5;
   border-left: 1px solid darkgrey;
   border-top: 1px solid darkgrey;
   font:arial;
 }
 
 .header-grid-container {
+  background-color: white;
   display: grid;
-  grid-template-columns: repeat(9, 1fr); /* 3 columns */
-  grid-template-rows: repeat(3, 1fr); /* 4 rows */
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 
 .grid-item-col {
