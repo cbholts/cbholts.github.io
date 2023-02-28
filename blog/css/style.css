@@ -1,6 +1,7 @@
  /* Add some style to the page */
     body {
         font-family: courier new, sans-serif;
+        margin: 0;
       }
       h1 {
         color: white;
