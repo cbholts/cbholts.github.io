@@ -27,7 +27,7 @@ header{
   background-color: white;
   display: grid;
   grid-template-columns: repeat(9, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   z-index: 3;
   overflow: hidden;
   }
@@ -50,9 +50,9 @@ header{
   }
   
   a2 {
-  font-size: 1.60vh;
+  font-size: 15px;
   text-decoration: none;
-  color: black;
+  color: #00297a;
   }
   
   .grid-item {
@@ -77,10 +77,10 @@ header{
   }
   
   .grid-item-link:hover {
-  border-bottom: 1px solid blue;
-  border-right:1px solid blue;
-  border-left: 1px solid blue;
-  border-top: 1px solid blue;
+  border-bottom: 2px solid #1a73e8;
+  border-right:2px solid #1a73e8;
+  border-left: 2px solid #1a73e8;
+  border-top: 2px solid #1a73e8;
   font-size:small;
   padding: 0px;
   text-align: center;
@@ -115,14 +115,7 @@ header{
 }
 
 /* project section*/
-.project {
-  margin: 0 auto;
-  padding: 20px;
-  max-width: 900px;
-}
-.project h3 {
-  margin: 0;
-}
+
 
 footer {
   padding-top: 20vh;

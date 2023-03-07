@@ -24,6 +24,8 @@
       }
       header h1 {
         margin: 0;
+        color:#00297a;
+        font-weight: bold;
       }
       nav {
         display: flex;
@@ -34,17 +36,18 @@
         padding: 0 20px;
       }
       nav a:hover {
-        color: blue;
+        color: #00297a;
       }
       /* Style the blog landing page */
       .blog-landing {
-        max-width: 700px;
+        max-width: 80%;
         margin: 0 auto;
         padding: 20px;
       }
       .blog-landing h2 {
         margin: 0;
-        color: navy;
+        color: #00297a;
+        font-weight: bold;
       }
       .blog-landing p {
         margin: 20px 0;
