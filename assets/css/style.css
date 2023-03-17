@@ -6,6 +6,7 @@ html, body {
     
 h1 {
   color: white;
+  font-size: 20px;
 }
 h2 {
     color:white;
@@ -50,7 +51,7 @@ header{
   }
   
   a2 {
-  font-size: 15px;
+  font-size: 19px;
   text-decoration: none;
   color: #00297a;
   }

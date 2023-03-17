@@ -1,13 +1,17 @@
  /* Add some style to the page */
     body {
-        font-family: courier new, sans-serif;
+      font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         margin: 0;
+        background-color: #162534;
       }
       h1 {
         color: white;
       }
+      p {
+        color: white;
+      }
       .project {
-        border: 1px solid black;
+        border: 1px solid white;
         margin: 20px 0;
         padding: 20px;
       }
@@ -16,7 +20,7 @@
       }
       /* Style the header and navigation menu */
       header {
-        background-color: black;
+        background-color: #262e3c;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -24,7 +28,12 @@
       }
       header h1 {
         margin: 0;
-        color:#00297a;
+        color:white;
+        font-weight: bold;
+      }
+      header p {
+        margin: 0;
+        color:white;
         font-weight: bold;
       }
       nav {
@@ -36,7 +45,7 @@
         padding: 0 20px;
       }
       nav a:hover {
-        color: #00297a;
+        color: #4d7ed0;
       }
       /* Style the blog landing page */
       .blog-landing {
@@ -46,8 +55,9 @@
       }
       .blog-landing h2 {
         margin: 0;
-        color: #00297a;
+        color: white;
         font-weight: bold;
+        font-size: 50px;
       }
       .blog-landing p {
         margin: 20px 0;
@@ -57,8 +67,20 @@
         padding-bottom: 20px;
         margin-bottom: 20px;
       }
-      .blog-landing .post h3 {
+      .blog-landing .post a:link {
         margin: 0;
+        color: white;
+        text-decoration: none;
+      }
+      .blog-landing .post a:hover {
+        margin: 0;
+        color: #4d7ed0;
+        text-decoration: none;
+      }
+      .blog-landing .post a:visited {
+        margin: 0;
+        color: #513e4f;
+        text-decoration: none;
       }
       .blog-landing .post p {
         margin: 10px 0;
