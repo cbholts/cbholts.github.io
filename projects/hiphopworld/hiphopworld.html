@@ -12,7 +12,7 @@
 </head>
 <!-- Add a header with the website title and navigation menu -->
 <header>
-    <div class="header-grid-container">
+    <div class="header-grid-container text-dark">
         <div class="grid-item-col header-item">A</div>
         <div class="grid-item-col header-item">B</div>
         <div class="grid-item-col header-item">C</div>
@@ -22,7 +22,7 @@
         <div class="grid-item-col header-item">G</div>
         <div class="grid-item-col header-item">H</div>
         <div class="grid-item-col header-item">I</div>
-        <div class="grid-item-link">
+        <div class="grid-item">
             <a2 class="fw-semibold">Clint's Portfolio</a2>
         </div>
         <div class="grid-item-link"></div>
@@ -35,7 +35,7 @@
             style="display: flex; width: 100%; height: 100%; align-items: center; justify-content: center;">=Home()</a>
         </div>
         <div class="grid-item-link">
-            <a href="blogindex.html"
+            <a href="../../blogindex.html"
                 style="display: flex; width: 100%; height: 100%; align-items: center; justify-content: center;">=Blog()</a>
         </div>
         <div class="grid-item-link">
@@ -45,7 +45,7 @@
     </div>
 </header>
 
-<body>
+<body class="text-light">
     <div class="container overflow-hidden">
         <h2 class="text-start">Hip-Hop World Visualization</h2>
         <a class="text-light fs-6 text-decoration-underline" href="https://github.com/clintbh/hiphopworld/tree/master">Github</a>
@@ -53,7 +53,29 @@
         <img class="img-fluid" src="../../images/projects/hiphopworld/hiphopworld.gif"></img>
     </div>
     <div class="container">
-        <script src="https://gist.github.com/clintbh/0efbbf0daa47600f83b8134e45953d86.js"></script> 
+        <p> This visualization shows when hip-hop artists from all around the world began their careers. The tools used for this project are Python and Tableau.</p>
+        <h1>Data Sources</h1>
+        <div><hr></div>
+        <ul>
+            <li><a class="text-light fs-6 text-decoration-underline" href="https://rapworldmap.com/">Rap World Map</a></li>
+            <li>Wikipedia</li>
+        </ul>
+        <h1>Process</h1>
+        <div><hr></div>
+        <p class="fs-6 fw-semibold">Cleaning</p>
+        <p>The first step was to explore and clean the Rap World Map dataset. The only data that's really needed is the name, location, and when the artists started.</p>
+        <script src="https://gist.github.com/clintbh/3f58fbe71dea879c70131e13d70cc05e.js"></script>
+        <p class="fs-6 fw-semibold">Web Scarping</p>
+        <div><hr></div>
+        <p>Next was scraping Wikipedia for more artists. I pulled a list of hip-hop musicians and filtered out the ones that are already in the Rap World dataset. Then we could loop through each artist to get the data needed.</p>
+        <script src="https://gist.github.com/clintbh/5f4142e5aff1c0d463f50481f2db250d.js"></script>
+        <p>Now that the terms are defined we can start the scraping process. This code will create a URL with the artists name(term) attached to the end. Then it will pull the data from the infobox on that page.</p>
+        <script src="https://gist.github.com/clintbh/d6fc966ba5979c96f353183d47350569.js"></script>
+        <p>This is where the first issue began. Some artists have names that resemble other things. For example, there is a rapper named Apathy. However, when the URL is created, this would result in a page about apathy or being apathetic. To fix this, the string '_(rapper)' had to be affixed to the term.</p>
+        <script src="https://gist.github.com/clintbh/679f7a7b7bae31f126c14f86563061cc.js"></script>
+        <p>Now these results can be exported to a spreadsheet.</p>
+        <script src="https://gist.github.com/clintbh/e6d8a5ec7fec3178957c045448fba34f.js"></script>
+        <p>This data was uploaded to Tableau and the animation was created using the Pages feature.</p>
     </div>
 </body>
 <footer class="footer">
