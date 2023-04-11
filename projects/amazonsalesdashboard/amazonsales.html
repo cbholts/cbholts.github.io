@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Clint's Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<!-- Add a header with the website title and navigation menu -->
+<header>
+  <div class="header-grid-container text-dark">
+    <div class="grid-item-col header-item">A</div>
+    <div class="grid-item-col header-item">B</div>
+    <div class="grid-item-col header-item">C</div>
+    <div class="grid-item-col header-item">D</div>
+    <div class="grid-item-col header-item">E</div>
+    <div class="grid-item-col header-item">F</div>
+    <div class="grid-item-col header-item">G</div>
+    <div class="grid-item-col header-item">H</div>
+    <div class="grid-item-col header-item">I</div>
+    <div class="grid-item-link">
+      <a2 class="fw-semibold">Clint's Portfolio</a2>
+    </div>
+    <div class="grid-item-link"></div>
+    <div class="grid-item-link"></div>
+    <div class="grid-item-link"></div>
+    <div class="grid-item-link"></div>
+    <div class="grid-item-link"></div>
+    <div class="grid-item-link">
+      <a href="../../index.html"
+        style="display: flex; width: 100%; height: 100%; align-items: center; justify-content: center;">=Home()</a>
+    </div>
+    <div class="grid-item-link">
+      <a href="blogindex.html"
+        style="display: flex; width: 100%; height: 100%; align-items: center; justify-content: center;">=Blog()</a>
+    </div>
+    <div class="grid-item-link">
+      <a href="#"
+        style="display: flex; width: 100%; height: 100%; align-items: center; justify-content: center;">=Experience()</a>
+    </div>
+  </div>
+</header>
+
+<body class="text-light">
+  <div class="container overflow-hidden">
+    <h2 class="text-start">Amazon Sales Dashboard and Analysis</h2>
+    <a class="text-light fs-6 text-decoration-underline" href="salesanalysis.html" target="_blank">Jupyter Notebook</a>
+    <a class="text-light fs-6 text-decoration-underline" href="https://github.com/clintbh/Amazon-Sales-Dashboard" target="_blank">Github</a>
+    <a class="text-light fs-6 text-decoration-underline" href="https://public.tableau.com/views/AmazonSalesDashboard_16809435458350/Dashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link" target="_blank">Tableau</a>
+</div>
+  <div class="container">
+  <div class='tableauPlaceholder' id='viz1681162714143' style='position: relative'><noscript><a href='#'><img
+          alt='Dashboard '
+          src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Am&#47;AmazonSalesDashboard_16809435458350&#47;Dashboard&#47;1_rss.png'
+          style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+      <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+      <param name='embed_code_version' value='3' />
+      <param name='site_root' value='' />
+      <param name='name' value='AmazonSalesDashboard_16809435458350&#47;Dashboard' />
+      <param name='tabs' value='no' />
+      <param name='toolbar' value='yes' />
+      <param name='static_image'
+        value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Am&#47;AmazonSalesDashboard_16809435458350&#47;Dashboard&#47;1.png' />
+      <param name='animate_transition' value='yes' />
+      <param name='display_static_image' value='yes' />
+      <param name='display_spinner' value='yes' />
+      <param name='display_overlay' value='yes' />
+      <param name='display_count' value='yes' />
+      <param name='language' value='en-US' />
+      <param name='filter' value='publish=yes' />
+    </object></div></div>
+  <div class="container">
+    <p>This project focuses on analyzing Amazon sales and inventory data. The goal of this project was to gain insights as to how the business was performing and create a dashboard to show KPI's and visuals.</p>
+    <h1>Links</h1>
+    <div><hr></div>
+    <ul>
+      <li><a class="text-light fs-6 text-decoration-underline" href="salesanalysis.html" target="_blank">Jupyter Notebook</a></li>
+      <li><a class="text-light fs-6 text-decoration-underline" href="https://github.com/clintbh/Amazon-Sales-Dashboard" target="_blank">Github</a></li>
+      <li><a class="text-light fs-6 text-decoration-underline" href="https://public.tableau.com/views/AmazonSalesDashboard_16809435458350/Dashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link" target="_blank">Tableau</a></li>
+    </ul>
+    <h1>Data Sources</h1>
+    <div><hr></div>
+    <ul>
+      <li><p>Amazon Sellers Active Listing Report</p></li>
+      <li>Amazon Sellers Inventory Tracking</li>
+  </ul>
+    <h1>Process</h1>
+    <div><hr></div>
+    <p>The entire process can be seen <a class="text-light fs-6 text-decoration-underline" href="salesanalysis.html" target="_blank">here</a> but below will show a brief outline of the steps performed during the analysis.</p>
+    <p class="fs-6 fw-semibold">Listing Data</p>
+    <p>I first began with the listing data. Upon intial inspection, there was some cleaning that needed to be done. There were NA values in the 'Cost Per Item', 'Total Ship Cost', 'Ship Cost Per Item', and 'Sales Rank' columns.</p>
+    <p>The following steps were taken to remedy these issues:</p>
+    <ul>
+      <li><p>The 'Cost Per Item', 'Total Ship Cost', and 'Ship Cost Per Item' were filled with the average values</p></li>
+      <li>The 'Sales Rank' was filled with the median sales rank</li>
+    </ul>
+    <p>Next was the exploration with of the data. The main dicoveries included:</p>
+    <ul>
+      <li><p>The majority (60%) of books were listed in the 'Good' condition</p></li>
+      <li>The overall amount of listings were decreasing steadily year over year</li>
+      <li>The majority of books listed had a sales rank of less than 500,000</li>
+    </ul>
+    <p class="fs-6 fw-semibold">Sales Data</p>
+    <p>There wasn't any cleaning that needed to be done for the Sales Data. This was expected due to the fact that these reports come directly from Amazon through their Seller Central.</p>
+    <p>I graphed the total sales, average sales price, amount of items sold, and the product cost over time. All of these had a downward trend. This was expected since we knew the amount of books lsited was also trending downwards.</p>
+    <p>It was then shown that the total sales have decreased roughly 30% per year since 2019, which was the highest grossing year.</p>
+    <div><hr></div>
+  </div>
+  
+</body>
+<footer>
+  <div class="container text-light py-4">
+    <div class="d-flex flex-column flex-sm-row justify-content-between border-bottom">
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><a class="text-light" href="blogindex.html">Blog</a></li>
+        <li class="ms-3"><a class="text-light" href="#">Experience</a></li>
+      </ul>
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><a class="text-light" href="#">Github</a></li>
+        <li class="ms-3"><a class="text-light" href="#">Tableau</svg></a></li>
+      </ul>
+    </div>
+    <p class="text-center text-light">&copy; 2023 Clinton Holts</p>
+  </div>
+  </div>
+</footer>
+<script
+    type='text/javascript'>                    var divElement = document.getElementById('viz1681162714143'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1300px'; vizElement.style.height = '927px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1300px'; vizElement.style.height = '927px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '1877px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+</html>
