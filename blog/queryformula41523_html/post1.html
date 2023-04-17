@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>QUERY() Formula</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../../blog/css/style.css">
+</head>
+  <!-- Add a header with the website title and navigation menu -->
+  <header class="bg-dark">
+    <div class="container">
+    <h1>QUERY()</h1>
+    <p class="text-light">"Just use the query formula"</p></div>
+    <nav>
+      <a href="../../../index.html">Home</a>
+      <!--<a href="#about">About</a>-->
+      <a href="../../../blogindex.html">Blog</a>
+      <!--<a href="#experience">Experience</a>-->
+    </nav>
+  </header>
+  <!-- Add a landing page for the blog -->
+  <style>
+    img{
+      display:block;
+      max-width: 70%;
+      height:auto;
+      text-align: center;
+      margin: auto;
+    }
+    .datasource {
+      color: orange;
+    }
+    .querytext{
+      color:lightgreen;
+    }
+    .formula{
+      text-align: center;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <p class="text-center fs-3">The Power Of The Query Formula</p>
+      <p>Any Google Sheets fans? If so… any query formula fans? In my opinion, the query formula in Google Sheets is one of the most powerful spreadsheet functions in existence. So what exactly is the query formula and why is my blog named after it? Directly from Google:</p>
+
+      <p><img class="img-responsive" src="../queryformula41523_html/images/Image_0.png" /></p>
+      <p>What this basically means is you can take a dataset and aggregate, filter, manipulate, and more, in a language similar to SQL. There are a bunch of different operators you can use inside the query itself and they have to follow a specific order. The list is:</p>
+      <ul class="text-light"><li>Where</li>
+      <li>Group By</li>
+      <li>Pivot</li>
+      <li>Order By</li>
+      <li>Limit</li>
+      <li>Offset</li>
+      <li>Label</li>
+      <li>Format</li>
+      <li>Options</li></ul>
+      
+      <p>You can aggregate on that data with SUM, COUNT, AVG, MAX, and MIN. Let’s look at a quick example. This is a very simple dataset of sales for various types of media.</p>
+      
+      <p><img src="../queryformula41523_html/images/Image_1.png" /></p>
+      <p>Let’s say we wanted to aggregate this data and find the total sales per item. We could use this formula to yield the result.</p>
+      
+      <p class="formula">=query(<span class='datasource'>A1:C9</span>,<span class="querytext"> "select B,sum(C) group by B"</span>)</p>
+      
+      <p><img src="../queryformula41523_html/images/Image_2.png" /></p>
+      
+      <p>Let’s also change the name of the sales column, and add average sales, and a count of sales per item. We should also format these values into currency. The final formula and result is:</p>
+      
+      <p class="formula">=query(<span class='datasource'>A1:C9</span>,<span class='querytext'>"select B,count(B),sum(C),avg(C) group by B label sum(C) 'Total Sales', avg(C) 'Average Sales', count(B) 'Count of Sales' format sum(C) '$0.00', avg(C) '$0.00'"</span>)</p>
+      
+      <p><img src="../queryformula41523_html/images/Image_3.png" /></p>
+      
+      <p>Expensive items obviously. Pretty cool though! Why is this special? Well, for our data section we have A1:C9. We could make this A:C, and then remove the nulls. I’ll explain why this would be beneficial.</p>
+      
+      <p class="formula">=query(<span class='datasource'>A:C</span>,<span class='querytext'>"select B,count(B),sum(C),avg(C) where A is not null group by B label sum(C) 'Total Sales', avg(C) 'Average Sales', count(B) 'Count of Sales' format sum(C) '$0.00', avg(C) '$0.00'"</span>)</p>
+      <p>This is beneficial because now, when a new row of data is added, this table will automatically update the values.</p>
+      
+      <p><img src="../queryformula41523_html/images/Image_4.gif" /></p>
+      
+      <p>So, now we have a table that automatically updates with as many aggregates as we need. Another cool thing we can do is incorporate dropdown filters into our query. If you think about it, the query is a string of text. You can concatenate text together using ‘&’. If we create a data validation drop down for the list of items, then we can filter based on the cell value. Let’s say our dropdown is going to go into cell L1.</p>
+      
+      <p class="formula">=query(<span class='datasource'>A:C</span>,<span class='querytext'>"select B,count(B),sum(C),avg(C) where A is not null and B contains '"</span>&<span class = 'text-primary'>L1</span>&<span class='querytext'>"' group by B label sum(C) 'Total Sales', avg(C) 'Average Sales', count(B) 'Count of Sales' format sum(C) '$0.00', avg(C) '$0.00'"</span>)</p>
+      
+      <p>All we added was ‘<i>and B contains ‘“&L1&”’</i>’. This is essentially just ending the string, concatenating the cell value, and continuing the rest of the query. It’s important to include single quotes(‘ ‘) before the double quotes(“ “) so that the cell value will be recognized as a string. This is the result:</p>
+      <p><img src="../queryformula41523_html/images/Image_5.gif" /></p>
+      
+      <p>Now let’s talk about where and how this can be applied. In one of my previous jobs, there was a lot of work done inside Google Sheets. I spent a lot of time working with survey data specifically and stakeholders wanted to actually read the responses to the data in an efficient manner. I created a dashboard that was a series of dropdown filters so they could filter down on which group of respondents they wanted to see at any given time. I’m going to make a real quick and brief example of that. Here’s our fake data thanks to the randbetween function and ChatGPT:</p>
+      
+      <p><img src="../queryformula41523_html/images/Image_6.png" /></p>
+      
+      <p>We can see that there’s a unique ID for each respondent, two different dates, regions, sessions, completion status, and their responses.</p>
+      <p>Here’s the layout for the dashboard(not my best work but it makes for a good quick example):</p>
+      
+      <p><img src="../queryformula41523_html/images/Image_7.png" /></p>
+      
+      <p> I’ll save the explanation on creating the formula but here it is:</p>
+
+      <div class="formula">
+      <p>=query(<span class='datasource'>surveydata!A:G</span>,<span class='querytext'>"Select * where A is not null "</span></p>
+      <p>&if(isblank(C18),<span class='querytext'>""</span>,<span class='querytext'>" and B = date '"</span>&text(datevalue(C18),<span class='querytext'>"yyy-mm-dd")</span>&<span class='querytext'>"'"</span>)&<span class='querytext'>" </p>
+      <p>"</span>&if(isblank(D18),<span class='querytext'>""</span>,<span class='querytext'>" and C contains '"</span>&<span class='text-primary'>D18</span>&<span class='querytext'>"'"</span>)&<span class='querytext'>" </p>
+      <p>"</span>&if(isblank(E18),<span class='querytext'>""</span>,<span class='querytext'>" and D contains '"</span>&<span class='text-danger'>E18</span>&<span class='querytext'>"'"</span>)&<span class='querytext'>" </p>
+      <p>"</span>&if(isblank(F18),<span class='querytext'>""</span>,<span class='querytext'>" and E contains '"</span>&<span class='text-warning'>F18</span>&<span class='querytext'>"'"</span>)&<span class='querytext'>" </p>
+      <p>"</span>&if(isblank(G18),<span class='querytext'>""</span>,<span class='querytext'>" and F contains '"</span>&<span class='text-info'>G18</span>&<span class='querytext'>"'"</span>)&<span class='querytext'>""</span>)</p>
+      </div>
+
+      <p>Pretty big one but not too bad. What this formula is doing is saying “if the filter cell is blank, leave the query blank, if not then add ‘and C contains [CELL VALUE]’”. The cell value would be the desired filter value.</p>
+      
+      <p>Next we just add that formula in the dashboard, add a little chart showing the median course rating, and give a count for the total responses.</p>
+      
+      <p><img src="../queryformula41523_html/images/Image_8.gif" /></p>
+      
+      <p>We can see that the response output changes with every filter allowing the user to see all the responses, or a very specific group. Very cool.</p>
+      
+      <p>I can’t stress enough how powerful this formula is. You can use vlookups, arrayformulas, filters, and much more in the [data] portion of the query formula. Truly eye-opening and is the reason why I prefer Google Sheets over Excel. I encourage any Sheets user to look into this and “just use the query formula.” Goodbye!</p>
+  </div>
+</body>
+</html>
