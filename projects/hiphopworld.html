@@ -60,7 +60,7 @@
 <body class="text-light">
     <div class="container overflow-hidden">
         <h2 class="text-start">Hip-Hop World Visualization</h2>
-        <a class="text-light fs-6 text-decoration-underline" href="https://github.com/clintbh/hiphopworld" target="_blank">Github</a>
+        <a class="text-light fs-6 text-decoration-underline" href="https://github.com/cbholts/hiphopworld" target="_blank">Github</a>
         <a class="text-light fs-6 text-decoration-underline" href="https://public.tableau.com/app/profile/clint.h1907/viz/Hip-HopWorld/Dashboard1?publish=yes" target="_blank">Tableau</a>
         <img class="img-fluid" src="../../images/projects/hiphopworld/hiphopworld.gif"></img>
     </div>
@@ -70,7 +70,7 @@
         <h1>Links</h1>
         <div><hr></div>
         <ul>
-            <li><a class="text-light fs-6 text-decoration-underline" href="https://github.com/clintbh/hiphopworld" target="_blank">Github</a></li>
+            <li><a class="text-light fs-6 text-decoration-underline" href="https://github.com/cbholts/hiphopworld" target="_blank">Github</a></li>
             <li><a class="text-light fs-6 text-decoration-underline" href="https://public.tableau.com/app/profile/clint.h1907/viz/Hip-HopWorld/Dashboard1?publish=yes" target="_blank">Tableau</a></li>
         </ul>
         <h1>Data Sources</h1>
@@ -83,17 +83,17 @@
         <div><hr></div>
         <p class="fs-6 fw-semibold">Cleaning</p>
         <p>The first step was to explore and clean the Rap World Map dataset. The only data that's really needed is the name, location, and when the artists started.</p>
-        <script src="https://gist.github.com/clintbh/3f58fbe71dea879c70131e13d70cc05e.js"></script>
+        <script src="https://gist.github.com/cbholts/3f58fbe71dea879c70131e13d70cc05e.js"></script>
         <p class="fs-6 fw-semibold">Web Scraping</p>
         <div><hr></div>
         <p>Next was scraping Wikipedia for more artists. I pulled a list of hip-hop musicians and filtered out the ones that are already in the Rap World dataset. Then we could loop through each artist to get the data needed.</p>
-        <script src="https://gist.github.com/clintbh/5f4142e5aff1c0d463f50481f2db250d.js"></script>
+        <script src="https://gist.github.com/cbholts/5f4142e5aff1c0d463f50481f2db250d.js"></script>
         <p>Now that the terms are defined we can start the scraping process. This code will create a URL with the artists name(term) attached to the end. Then it will pull the data from the infobox on that page.</p>
-        <script src="https://gist.github.com/clintbh/d6fc966ba5979c96f353183d47350569.js"></script>
+        <script src="https://gist.github.com/cbholts/d6fc966ba5979c96f353183d47350569.js"></script>
         <p>This is where the first issue began. Some artists have names that resemble other things. For example, there is a rapper named Apathy. However, when the URL is created, this would result in a page about apathy or being apathetic. To fix this, the string '_(rapper)' had to be affixed to the term.</p>
-        <script src="https://gist.github.com/clintbh/679f7a7b7bae31f126c14f86563061cc.js"></script>
+        <script src="https://gist.github.com/cbholts/679f7a7b7bae31f126c14f86563061cc.js"></script>
         <p>Now these results can be exported to a spreadsheet.</p>
-        <script src="https://gist.github.com/clintbh/e6d8a5ec7fec3178957c045448fba34f.js"></script>
+        <script src="https://gist.github.com/cbholts/e6d8a5ec7fec3178957c045448fba34f.js"></script>
         <p>This data was uploaded to Tableau and the animation was created using the Pages feature.</p>
     </div>
 </body>
@@ -106,7 +106,7 @@
           </ul>
           <ul class="list-unstyled d-flex">
             <li class="ms-3"><a class="text-light" href="https://www.linkedin.com/in/clint-h/" target="_blank">LinkedIn</a></li>
-            <li class="ms-3"><a class="text-light" href="https://github.com/clintbh" target="_blank">Github</a></li>
+            <li class="ms-3"><a class="text-light" href="https://github.com/cbholts" target="_blank">Github</a></li>
             <li class="ms-3"><a class="text-light" href="https://public.tableau.com/app/profile/clint.h1907" target="_blank">Tableau</svg></a></li>
           </ul>
         </div>
