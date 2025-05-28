@@ -39,7 +39,7 @@ header{
   }
   
   .grid-item-col {
-  border-bottom: 0.5px solid darkgrey;
+  border-bottom: 1px solid darkgrey;
   border-right:1px solid darkgrey;
   padding: 0px;
   display:flex;
@@ -65,15 +65,16 @@ header{
   border-bottom: 1px solid darkgrey;
   border-right:1px solid darkgrey;
   background-color: white;
-  padding: 0.5px;
+  padding: 0px;
   font-size: small;
   display:flex;
   align-items: center;
   }
   
   .grid-item-link {
-  border-bottom: 1px solid darkgrey;
-  border-right:1px solid darkgrey;
+  border: 1px solid darkgrey;
+  /*border-bottom: 1px solid darkgrey;
+  border-right:1px solid darkgrey;*/
   background-color: white;
   padding: 1px;
   display:flex;
@@ -87,10 +88,11 @@ header{
   border-left: 2px solid #1a73e8;
   border-top: 2px solid #1a73e8;
   padding: 0px;
-  display:flex;
+  overflow: visible;
   }
   
   .header-item{
+  border: 1px solid darkgrey;
   background-color: lightgray;
   }
 
